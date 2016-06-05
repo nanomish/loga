@@ -12,6 +12,18 @@
       $scope.$on('$destroy', function() {
         socket.unsyncUpdates('thing');
       });
+
+      if (hasGetUserMedia()) {
+        // Good to go!
+        alert('getUserMedia() good to go');
+      } else {
+        alert('getUserMedia() is not supported in your browser');
+      }
+    }
+
+    function hasGetUserMedia() {
+      return !!(navigator.getUserMedia || navigator.webkitGetUserMedia ||
+      navigator.mozGetUserMedia || navigator.msGetUserMedia);
     }
 
     $onInit() {
