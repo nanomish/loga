@@ -5,30 +5,11 @@ import passport from 'passport';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
 
-var Canvas = require('canvas');
-/*
-// qr code
+var qrnode = require('qrnode');
 
-var Canvas = require('canvas')
-  , Image = Canvas.Image
-  , qrcode = require('jsqrcode')(Canvas)
-
-var filename = '/Users/mkushnir/repos/full-login/server/guardian_qrcode.jpg';// __dirname + '/qrcode.png'
-
-var image = new Image()
-image.onload = function(){
-  var result;
-  try{
-    result = qrcode.decode(image);
-    console.log('result of qr code: ' + result);
-  }catch(e){
-    console.log('unable to read qr code');
-  }
-}
-image.src = filename
-
-// end of qr code
-*/
+qrnode.detect("/Users/mkushnir/repos/full-login/server/guardian_qrcode.jpg", function(result){
+  console.log('qr code decoding result' + result);
+});
 
 function validationError(res, statusCode) {
   statusCode = statusCode || 422;
