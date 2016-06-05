@@ -5,11 +5,11 @@ import passport from 'passport';
 import config from '../../config/environment';
 import jwt from 'jsonwebtoken';
 
-var qrnode = require('qrnode');
+/*var qrnode = require('qrnode');
 
 qrnode.detect("/Users/mkushnir/repos/full-login/server/guardian_qrcode.jpg", function(result){
   console.log('qr code decoding result' + result);
-});
+});*/
 
 function validationError(res, statusCode) {
   statusCode = statusCode || 422;
