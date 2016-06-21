@@ -68,6 +68,8 @@ var config = {
 
     // Setup mongo for tests
     var mongoose = require('mongoose');
+    console.log('Connecting to mongodb using string: ' + serverConfig.mongo.uri);
+    console.log('Connecting to mongodb using options: ' + serverConfig.mongo.options);
     mongoose.connect(serverConfig.mongo.uri, serverConfig.mongo.options); // Connect to database
   }
 };
