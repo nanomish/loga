@@ -109,7 +109,7 @@
   "scripts": {
     "test": "grunt test",
     "update-webdriver": "node node_modules/protractor/bin/webdriver-manager update",
-    "start": "babel-node --presets es2015 ./server/index.js"
+    "start": "babel-node --presets es2015 server/index.js"
   },
   "private": true
 }
